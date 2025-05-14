@@ -14,4 +14,4 @@ Metrics/MethodLength:
 # Offense count: 2
 Style/MixinUsage:
   Exclude:
-    - 'capitulo_01_introducao_algoritmos/index.rb'
+    - 'chapter_01_introduction_to_algorithms/index.rb'
