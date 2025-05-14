@@ -17,25 +17,23 @@ RSpec.describe RunTime do
 
     it 'measures the execution time of a selection sort algorithm' do
       selection_sort = lambda do |array|
-      n = array.length
+        n = array.length
 
-      (0...n - 1).each do |i|
-        min_index = i
+        (0...n - 1).each do |i|
+          min_index = i
 
-        (i + 1...n).each do |j|
-        min_index = j if array[j] < array[min_index]
+          (i + 1...n).each do |j|
+            min_index = j if array[j] < array[min_index]
+          end
+
+          array[i], array[min_index] = array[min_index], array[i] if min_index != i
         end
 
-        if min_index != i
-        array[i], array[min_index] = array[min_index], array[i]
-        end
-      end
-
-      array
+        array
       end
 
       result = RunTime.measure('selection sort') do
-      selection_sort.call([5, 3, 6, 2, 10])
+        selection_sort.call([5, 3, 6, 2, 10])
       end
 
       expect(result[:algorithm]).to eq('selection sort')
