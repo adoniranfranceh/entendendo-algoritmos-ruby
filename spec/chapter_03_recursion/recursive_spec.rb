@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rspec'
-require_relative '../../chapter_03_recursion/recursion'
+require_relative '../../chapter_03_recursion/recursive'
 
 RSpec.describe Algorithm::Recursion do
   describe '.find_key' do
